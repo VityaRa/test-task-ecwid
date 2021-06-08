@@ -1,0 +1,1 @@
+Test task implementation for Ecwid company
