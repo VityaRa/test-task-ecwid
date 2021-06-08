@@ -1,24 +1,31 @@
 {
-  "name": "test-task-ecwid",
-  "version": "1.0.0",
-  "description": "Test task implementation for Ecwid company",
-  "main": "index.js",
+  "name": "ecwid-project",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "watch": "sass --watch --sourcemap=none ./src/style.scss:./src/style.css ./src/components/adder/adder.scss:./src/components/adder/adder.css ./src/components/images-list/images-list.scss:./src/components/images-list/images-list.css",
-    "build" : "sass --sourcemap=none  ./src/style.scss:./src/style.css ./src/components/adder/adder.scss:./src/components/adder/adder.css ./src/components/images-list/images-list.scss:./src/components/images-list/images-list.css"
+    "build": "webpack",
+    "dev": "webpack serve --env development",
+    "lint": "eslint src"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/VityaRa/test-task-ecwid.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/VityaRa/test-task-ecwid/issues"
-  },
-  "homepage": "https://github.com/VityaRa/test-task-ecwid#readme",
+  "author": "Vityara",
   "devDependencies": {
-    "sass": "^1.34.1"
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^8.1.1",
+    "css-loader": "^5.2.4",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-webpack-plugin": "^2.5.4",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.6.0",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1",
+    "ts-loader": "^9.1.1",
+    "typescript": "^4.2.4",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
