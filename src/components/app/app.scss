@@ -1,0 +1,15 @@
+.add-field__container {
+  background-color: #EAF4F7;
+  padding: 1.5rem 0;
+}
+
+.galary-container {
+  max-width: 860px;
+  width: 100%;
+  height: calc(100vh - 2rem);
+  margin: auto;
+  background-color: #F3F3F3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
