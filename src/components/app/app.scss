@@ -6,7 +6,7 @@
 .galary-container {
   max-width: 860px;
   width: 100%;
-  height: calc(100vh - 2rem);
+  min-height: calc(100vh - 5rem);
   margin: auto;
   background-color: #F3F3F3;
   display: flex;
