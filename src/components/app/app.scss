@@ -9,7 +9,8 @@
   min-height: calc(100vh - 5rem);
   margin: auto;
   background-color: #F3F3F3;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+}
+
+main.loading {
+  display: none;
 }

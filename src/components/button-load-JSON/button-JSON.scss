@@ -1,4 +1,11 @@
 .btn__json {
-  width: 290px;
+  width: 160px;
+  display: flex;
+  align-items: center;
   background-color: #EAF4F7;
+  height: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .3s;
 }
