@@ -58,7 +58,6 @@ export class ImagesList extends BaseComponent {
       reader.onloadend = () => {
         const url = reader.result;
         if (url) {
-          console.log(url);
           this.createImage(<string>url);
         }
       };
@@ -76,13 +75,16 @@ export class ImagesList extends BaseComponent {
   }
 
   highlight = (e: Event) => {
-    this.element.classList.add('galary__inner__highlight');
-    console.log(this.element.parentNode);
-
+    if (!this.element.classList.contains('galary__inner__highlight')) {
+      this.element.classList.add('galary__inner__highlight');
+    }
   };
 
   unhighlight = (e: Event) => {
-    this.element.classList.remove('galary__inner__highlight');
+    if (this.element.classList.contains('galary__inner__highlight')) {
+      this.element.classList.remove('galary__inner__highlight');
+    }
+
   };
 
   eventPreventDefaults() {
