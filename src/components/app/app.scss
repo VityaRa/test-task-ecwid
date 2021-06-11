@@ -14,3 +14,9 @@
 main.loading {
   display: none;
 }
+
+@media screen and (max-width: 700px){
+  .galary-container {
+    min-height: calc(100vh - 10rem);
+  }
+}

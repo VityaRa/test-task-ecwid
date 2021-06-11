@@ -45,47 +45,45 @@ export class ImagesList extends BaseComponent {
       }
     }) as EventListener);
 
-    this.eventPreventDefaults()
-    this.interactiveDrag()
-    this.element.addEventListener('drop', this.handleDrop, false)
+    this.eventPreventDefaults();
+    this.interactiveDrag();
+    this.element.addEventListener('drop', this.handleDrop, false);
   }
 
-  handleDrop = (e:any) => {
-    const dt = e.dataTransfer
-    const files = <FileList>dt.files
-    const urls: string[] = []
-
-
+  handleDrop = (e: any) => {
+    const dt = e.dataTransfer;
+    const files = <FileList>dt.files;
     for (let i = 0; i < files.length; i++) {
-      const reader  = new FileReader();
+      const reader = new FileReader();
       reader.onloadend = () => {
         const url = reader.result;
         if (url) {
           console.log(url);
-          this.createImage(<string>url)
+          this.createImage(<string>url);
         }
-      }
-      reader.readAsDataURL(files[i])
+      };
+      reader.readAsDataURL(files[i]);
     }
-  }
-
+  };
 
   interactiveDrag() {
-    ;['dragenter', 'dragover'].forEach(eventName => {
-      this.element.addEventListener(eventName, this.highlight, false)
-    })
-    ;['dragleave', 'drop'].forEach(eventName => {
-      this.element.addEventListener(eventName, this.unhighlight, false)
-    })
+    ['dragenter', 'dragover'].forEach((eventName) => {
+      this.element.addEventListener(eventName, this.highlight, false);
+    });
+    ['dragleave', 'drop'].forEach((eventName) => {
+      this.element.addEventListener(eventName, this.unhighlight, false);
+    });
   }
 
   highlight = (e: Event) => {
-    this.element.classList.add('galary__inner__highlight')
-  }
+    this.element.classList.add('galary__inner__highlight');
+    console.log(this.element.parentNode);
+
+  };
 
   unhighlight = (e: Event) => {
-    this.element.classList.remove('galary__inner__highlight')
-  }
+    this.element.classList.remove('galary__inner__highlight');
+  };
 
   eventPreventDefaults() {
     ['dragenter', 'dragleave', 'dragover', 'drop'].forEach((event) => {
