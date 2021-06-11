@@ -11,11 +11,11 @@ export class ButtonJSON extends BaseComponent {
 
   btnJsonHandler(): void {
     const elem = <HTMLInputElement>(document.querySelector('[data-type="input"]'));
-    if (elem && elem.files && elem.files[0].type === 'application/json') {
+    if (elem && elem.files && elem.files[0].type === 'application/json' ) {
       this.getUrlList(elem)
       elem.value = ''
     } else {
-      alert('Error');
+      alert('Загрузить можно только JSON!');
       return;
     }
   }
