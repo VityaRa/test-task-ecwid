@@ -1,0 +1,35 @@
+.add-field__inner {
+  max-width: 860px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  align-items: center;
+}
+
+.add-field__input {
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: 310px;
+  background-color: rgba(#8fe4ff, 0.5);
+  border-radius: 0.5rem;
+  border: 1px solid rgba($color: #000000, $alpha: 0.3);
+  padding: 0.4rem 0 0.4rem 0.5rem;
+}
+
+input[type="file"] {
+  color: transparent;
+  width: 165px;
+}
+
+@media screen and (max-width: 700px) {
+  .add-field__inner {
+    flex-direction: column;
+  }
+  .add-field__inner > * {
+    margin-bottom: 0.5rem;
+  }
+  .btn__json {
+    width: 150px !important;
+  }
+}
